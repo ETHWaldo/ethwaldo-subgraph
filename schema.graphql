@@ -1,0 +1,62 @@
+type CreatorRegistered @entity(immutable: true) {
+  id: Bytes!
+  id: BigInt! # uint256
+  creator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DealApproved @entity(immutable: true) {
+  id: Bytes!
+  dealId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DealCreated @entity(immutable: true) {
+  id: Bytes!
+  dealId: BigInt! # uint256
+  sponsor: Bytes! # address
+  creator: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DealRejected @entity(immutable: true) {
+  id: Bytes!
+  dealId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type FundsReleased @entity(immutable: true) {
+  id: Bytes!
+  dealId: BigInt! # uint256
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type SponsorRegistered @entity(immutable: true) {
+  id: Bytes!
+  id: BigInt! # uint256
+  sponsor: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
